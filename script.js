@@ -31,37 +31,12 @@ document.addEventListener("keydown", function (e) {
 const header = document.querySelector(".header");
 document.querySelector(".header");
 const allSections = document.querySelectorAll(".section");
-// disabling cookie msg for now
-// const message = document.createElement("div");
-// message.classList.add("cookie-message");
-// message.innerHTML =
-//   'We Use Cookie <button class="btn btn--close-cookie">OK</button>';
-// header.append(message);
-// document
-//   .querySelector(".btn--close-cookie")
-//   .addEventListener("click", function () {
-//     message.remove();
-//   });
-
-// message.style.backgroundColor = "#323236";
-// message.style.width = "100%";
-// message.style.height =
-//   Number.parseFloat(getComputedStyle(message).height) + 20 + "px";
-
 //smooth scrolling
 const btnScrollTo = document.querySelector(".btn--scroll-to");
 const section1 = document.querySelector("#section--1");
 
 btnScrollTo.addEventListener("click", function (e) {
   const s1Coords = section1.getBoundingClientRect();
-
-  //old way of scrolling
-  // window.scrollTo({
-  //   left: s1Coords.left + window.pageXOffset,
-  //   top: s1Coords.top + window.pageYOffset,
-  //   behavior: "smooth",
-  // });
-
   //modern way of scrolling
   section1.scrollIntoView({ behavior: "smooth" });
 });
